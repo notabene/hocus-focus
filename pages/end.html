@@ -1,10 +1,10 @@
 ---
-title: "The end"
+title: "Fin"
 layout: default
 permalink: /end/
 ---
 <div class="rules">
-	<p>Congratulations! You did it!</p>
+	<p>Bravo&nbsp;! Vous avez réussi&nbsp;!</p>
 </div>
 <div class="end">
 	<div class="toot">
@@ -13,17 +13,18 @@ permalink: /end/
 		</div>
 		<div class="toot-content">
 			{% assign site-url = "https://focus.hteumeuleu.com" %}
-			{%- assign toot-text = "I finished “Hocus :focus”, a keyboard accessibility horror game, in 66:66.66. Don’t be a 🧟 monster. Make your websites keyboard accessible." -%}
+			<!-- THIS SHOULD POINT TO THE FR URL! -->
+			{%- assign toot-text = "J'ai fini “Hocus :focus”, un jeu d'horreur d'accessibilité au clavier, en 66:66.66. Ne soyez pas un monstre 🧟. Faites des sites accessibles au clavier." -%}
 			<p>
 				{{ toot-text }} <a class="toot-link" href="{{ site-url }}">{{ site-url }}</a>
 			</p>
-			<a class="toot-button" href="https://mastodon.social/share?text={{ toot-text | uri_escape }}&url={{ site-url }}">Share on Mastodon</a>
+			<a class="toot-button" href="https://mastodon.social/share?text={{ toot-text | uri_escape }}&url={{ site-url }}">Partager sur Mastodon</a>
 			<script>
 				const btn = document.querySelector('.toot-button');
 				btn.addEventListener('click', (e) => {
 					e.preventDefault();
 					// via https://www.bentasker.co.uk/posts/documentation/general/adding-a-share-on-mastodon-button-to-a-website.html
-					const domain = prompt("Enter your Mastodon domain", "mastodon.social");
+					const domain = prompt("Indiquez votre domaine Mastodon", "mastodon.social");
 					if (domain == "" || domain == null){
 						return;
 					}
@@ -34,13 +35,13 @@ permalink: /end/
 		</div>
 	</div>
 	<p>
-		Don’t be a <span class="char" style="color:#96ac9c;"><span aria-hidden="true">🧟</span> monster</span>. Make your websites keyboard accessible.<br>Learn more with the following ressources:
+		Ne soyez pas un <span class="char" style="color:#96ac9c;"><span aria-hidden="true">🧟</span> monstre</span>. Faites des sites accessibles au clavier.<br>Apprenez-en plus avec les ressources suivantes&nbsp;:
 	</p>
 	<ul class="ressources-list">
-		<li><a href="https://webaim.org/techniques/keyboard/">Keyboard Accessibility</a>, <a href="https://twitter.com/webaim">WebAIM</a></li>
-		<li><a href="https://noti.st/ericwbailey/TcMJFP/if-it-s-interactive-it-needs-a-focus-style">If it’s interactive, it needs a focus style</a>, <a href="https://twitter.com/ericwbailey">@ericwbailey</a></li>
-		<li><a href="https://www.sarasoueidan.com/blog/focus-indicators/">A guide to designing accessible focus indicators</a>, <a href="https://twitter.com/SaraSoueidan">@SaraSoueidan</a></li>
-		<li><a href="https://adrianroselli.com/2017/02/avoid-default-browser-focus-styles.html">Avoid Default Browser Focus Styles</a>, <a href="https://twitter.com/aardrian">@aardrian</a></li>
+		<li><a href="https://webaim.org/techniques/keyboard/" hreflang="en">Accessibilité au clavier (en anglais)</a>, <a href="https://twitter.com/webaim">WebAIM</a></li>
+		<li><a href="https://noti.st/ericwbailey/TcMJFP/if-it-s-interactive-it-needs-a-focus-style" hreflang="en">Si c'est interactif, alors il faut un style de focus (en anglais)</a>, <a href="https://twitter.com/ericwbailey">@ericwbailey</a></li>
+		<li><a href="https://www.sarasoueidan.com/blog/focus-indicators/" hreflang="en">Un guide pour faire des indicateurs de focus accessibles (en anglais)</a>, <a href="https://twitter.com/SaraSoueidan">@SaraSoueidan</a></li>
+		<li><a href="https://adrianroselli.com/2017/02/avoid-default-browser-focus-styles.html" hreflang="en">Évitez les styles de focus par défaut du navigateur (en anglais)</a>, <a href="https://twitter.com/aardrian">@aardrian</a></li>
 	</ul>
 </div>
 <script>
